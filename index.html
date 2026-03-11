@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Black Jack</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+
+        
+       <button class="btnOpenModal" onclick="openModal()"><span title="Ensina como jogar o jogo">Como Jogar</span></button>
+
+       <div class="modal-container">
+        <div class="modal">
+            <h2>Tutorial</h2>
+            <hr />
+            <span>
+                O principal objetivo de Blackjack, é que a soma das suas cartas fique mais próxima de 21 do que as do adversário. E caso passe de 21, você perde automaticamente. Tanto você(jogador), quanto seu oponente(dealer), iniciam possuindo duas cartas. Mas o dealer permanecerá com uma virada para baixo até o final do jogo. O botão "Comprar" irá comprar mais uma carta. E o botão "Ficar" encerra a vez do jogador e passa a vez para o dealer. As cartas de 2 a 10 valem seu respectivo valor. E as cartas "J", "Q" e "K" valem 10. A carta "A" pode valer 1 ou 11. O dealer é obrigado a comprar cartas até obter o valor mínimo de 17. Além disso, caso ele já tenha obtido valores maiores ou iguais a 17, ele também é obrigado a parar de comprar. Uma boa estratégia para vencer em Blackjack é pensar na probabilidade de suas chances, por isso preparamos explicações sobre o assunto para você.
+            </span>
+            <hr /> 
+            <div class="btns">
+                <button class="btnClose" onclick="closeModal()">Probabilidade</button>
+                <button class="btnClose" onclick="closeModal()">Fechar</button>
+            </div>
+        </div>
+       </div>
+
+<!--botao recarregar-->
+       <input type="button" value="Novo Jogo" onClick="window.location.reload()"> 
+
+       
+       <h2>Dealer: <span id="dealer-sum"></span></h2> 
+       <div id="dealer-cards">
+        <img id="hidden" src="./cards/BACK.png">
+       </div>
+
+       <h2>Você: <span id="your-sum"></span></h2>
+       <div id="your-cards"></div>
+
+       <br>
+       <div class="botoes">
+       <button id="hit" ><span title="Você irá comprar uma nova carta">Comprar</span></button>
+       <button id="stay"><span title="Você irá ficar com a mão">Ficar</span></button>
+    </div>
+       <p id="results"></p>
+
+<!--script para o modal-->
+       <script src="modal.js"></script>
+
+    <div class="body-content">
+       <footer class="fixarRodape">
+        <div class="filter">
+        <p>&copy; 2024</p>
+            <nav>
+                <center>
+                <ul>
+                    <li><a href="#">Desenvolvido por: Bruna Carrassai, Rafael Ramos, Pedro Toledo, Évilyn Flores</a></li>
+                    <li><a href="#">Sob orientação: Arthur Marques de Oliveira</a></li>
+                </ul>
+            </center>
+            </nav>
+        </div>
+         </footer>
+         
+        </div>
+    </body>
+</html>
+
+<!--o objetivo é ter mais pontos que o seu adversario  , mas sem ultrapassar os 21 (caso em que se perde) . o dealer só pode pedir até um maximo de 5 cartas ou até chegar ao numero 17 -->
