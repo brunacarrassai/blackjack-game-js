@@ -35,7 +35,7 @@ To simulate the Blackjack game using JavaScript, exploring data structures to re
 
 1. Clone the repository:
 
-git clone https://github.com/brunacarrassai/blackjack-game-js
+git clone https://brunacarrassai.github.io/blackjack-game-js/
 
 2. Open the file:
 
